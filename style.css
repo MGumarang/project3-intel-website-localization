@@ -1,0 +1,174 @@
+/* Fonts */
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* Body copy & UI elements */
+}
+
+body #hero-subheading, .footer {
+  margin: 3rem 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* Body copy & UI elements */
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* Timeline years & Section titles */
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(to bottom, #b2c1ce, #f8f8f8);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  /* Background gradient overlay + photo */
+  background: linear-gradient(rgba(6,30,60,0.45), rgba(6,30,60,0.65)), url('img/Intel_Headquarters_in_2023.jpg') center/cover no-repeat;
+  background-color: #0a5aa0; /* fallback color while image loads */
+  color: #fff; /* ensure text is readable on the photo */
+  padding: 2rem;
+  max-width: 1300px;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.hero img {
+  max-width: 10%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-top: 0.5rem;
+  text-decoration: underline;
+}
+
+#hero-subheading {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+/* Timeline */
+.timeline {
+  display: flex; /* Display the timeline as a flex container */
+  flex-direction: nowrap; /* Prevents the flex items from wrapping */
+  padding: 2rem;
+  max-width: 1300px; /* Show five 200px cards (+margins) at a time */
+  width: 90%;
+  margin: 0 auto; /* Center timeline within the page */
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  scroll-snap-type: x mandatory; /* Enables snap scrolling */
+}
+
+.timeline-card {
+  flex: 0 0 auto;
+  flex-shrink: 0; /* Prevents cards from shrinking */
+  width: 200px; /* Fixed width for each card */
+  margin: 0 1rem; /* Space between each card */
+  padding: 1rem; /* Space inside each card */
+  background-color: #f0f0f0;
+  border-radius: 8px; /* Bevels the corners of each card */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+  scroll-snap-align: center; /* Aligns each card to the center of the scroll snap area */
+}
+
+.timeline h2 {
+  color: #00a2cf;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.timeline h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card img {
+  width: 100%;
+  height: auto;
+  margin: 0.5rem auto;
+}
+
+.timeline-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-card:hover,
+.timeline-card:focus-within {
+  transform: translateY(-10px);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 116, 204, 0.92), rgba(2, 57, 108, 0.95));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.timeline-card:hover .overlay,
+.timeline-card:focus-within .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .hero {
+    max-width: 90%;
+    padding: 2rem 1rem;
+  }
+
+  .hero img {
+    max-width: 20%;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .timeline-card {
+    width: 80%;
+    margin: 1rem auto;
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .timeline h2 {
+    font-size: 4rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .timeline h3 {
+    font-size: 2rem;
+  }
+
+  .overlay {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+}
