@@ -11,6 +11,7 @@ body #hero-subheading, .footer {
 
 h1, h2, h3 {
   font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* Timeline years & Section titles */
+  font-weight: bold;
   text-align: center;
 }
 
@@ -63,7 +64,8 @@ body {
 .timeline-card {
   flex: 0 0 auto;
   flex-shrink: 0; /* Prevents cards from shrinking */
-  width: 200px; /* Fixed width for each card */
+  width: 232px; /* Fixed width for each card */
+  height: 300px; /* Fixed height for each card */
   margin: 0 1rem; /* Space between each card */
   padding: 1rem; /* Space inside each card */
   background-color: #f0f0f0;
@@ -73,7 +75,7 @@ body {
 }
 
 .timeline h2 {
-  color: #00a2cf;
+  color: #003e86;
   font-size: 2rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -104,6 +106,7 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(180deg, rgba(0, 116, 204, 0.92), rgba(2, 57, 108, 0.95));
   color: #fff;
   display: flex;
@@ -112,7 +115,10 @@ body {
   align-items: center;
   text-align: center;
   padding: 1.5rem;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* Body copy & UI elements */
   font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.35;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -122,6 +128,36 @@ body {
 .timeline-card:focus-within .overlay {
   opacity: 1;
   visibility: visible;
+}
+
+/* Learn More Section */
+.card-title {
+  color: #003e86;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 2rem;
+}
+
+span {
+  color: #003e86;
+  font-size: 3rem;
+}
+
+.learn-more .btn-custom {
+  background: #0055a5;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 1.4rem;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.learn-more .btn-custom:hover {
+  background: #003d7a;
+  transform: scale(1.07);
 }
 
 /* Responsive Design */
@@ -153,6 +189,7 @@ body {
 
   .timeline-card {
     width: 80%;
+    height: auto;
     margin: 1rem auto;
     padding: 2rem;
     justify-content: center;

@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -32,7 +34,7 @@
   </header>
 
   <!-- Timeline Cards Section -->
-  <section class="timeline">
+  <main class="timeline">
 
     <!-- Card 1: 1968 -->
     <div class="timeline-card" tabindex="0">
@@ -141,7 +143,61 @@
         next-generation sustainable semiconductor manufacturing.
       </p>
     </div>
-  </section>
-  <p class="footer">Scroll to view timeline | Hover over cards to learn more!</p>
+  </main>
+
+  <!-- Learn More Section -->
+  <section class="learn-more container py-5">
+    <!-- container centers the section and adds side padding -->
+    <div class="row g-4">
+      <!-- row groups columns and adds space between them -->
+      <div class="col-12 col-md-4">
+        <!-- full width on small screens, one-third width on medium+ screens -->
+        <div class="card h-100">
+          <div class="card-body shadow d-flex flex-column align-items-center">
+            <span class="bi bi-droplet fs-14 m-2"></span>
+            <h2 class="card-title">Sustainability Goals</h2> 
+            <p class="card-text">
+              Learn how Intel sets long-term climate, water, and waste reduction targets.
+            </p>
+            <a href="#" class="btn btn-custom mt-3 btn-lg mt-auto w-100 ">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <!-- full width on small screens, one-third width on medium+ screens -->
+        <div class="card h-100">
+          <div class="card-body shadow d-flex flex-column align-items-center">
+            <span class="bi bi-globe fs-14 m-2"></span>
+            <h2 class="card-title">Global Impact</h2>
+            <p class="card-text">
+              See how Intel’s sustainable operations extend across offices, fabs, and supply chains.
+            </p>
+            <a href="#" class="btn btn-custom mt-3 btn-lg mt-auto w-100 ">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    <div class="col-12 col-md-4">
+      <!-- full width on small screens, one-third width on medium+ screens -->
+      <div class="card h-100">
+        <div class="card-body shadow d-flex flex-column align-items-center">
+          <span class="bi bi-lightbulb fs-14 m-2"></span>
+          <h2 class="card-title">Innovation Stories</h2>
+          <p class="card-text">
+            Discover examples of smart manufacturing, renewable energy, and circular design.
+          </p>
+          <a href="#" class="btn btn-custom mt-3 btn-lg mt-auto w-100 ">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p class="footer">Scroll to view timeline | Hover over cards to learn more!</p>
+    <p class="footer">© 2024 Intel Corporation. All rights reserved.</p>
+  </footer>
 </body>
 </html>
