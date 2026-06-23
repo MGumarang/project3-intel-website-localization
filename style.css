@@ -160,6 +160,51 @@ span {
   transform: scale(1.07);
 }
 
+/* Subscription form styling */
+.subscribe-section .card-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subscribe-section .card-body {
+  padding: 2rem;
+}
+
+.card-body p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.subscribe-section .form-control:focus {
+  box-shadow: 0 0 0 0.15rem rgba(0, 86, 165, 0.25);
+  border-color: #0055a5;
+}
+
+.subscribe-section .btn-primary {
+  background-color: #0055a5;
+  border-color: #0055a5;
+}
+
+.subscribe-section .btn-primary:hover {
+  background-color: #003d7a;
+  border-color: #003d7a;
+}
+
+.form-check {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.subscribe-section button {
+  margin-top: 1rem;
+}
+
+small.text-muted {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
 
