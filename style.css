@@ -35,7 +35,8 @@ body {
 .hero img {
   max-width: 10%;
   height: auto;
-  margin: 2rem auto;
+  display: block;
+  margin: 2.5rem auto;
 }
 
 .hero h1 {
@@ -203,6 +204,40 @@ small.text-muted {
   display: block;
   margin-top: 1rem;
   text-align: center;
+}
+
+/* RTL Layout */
+html[dir="rtl"], body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .hero,
+body.rtl .hero {
+  text-align: right;
+}
+
+html[dir="rtl"] .timeline-card,
+body.rtl .timeline-card,
+html[dir="rtl"] .card-body,
+body.rtl .card-body,
+html[dir="rtl"] .form-check,
+body.rtl .form-check {
+  text-align: right;
+}
+
+body.rtl .timeline {
+  direction: ltr;
+}
+
+body.rtl .form-check-input {
+  float: right;
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+body.rtl .btn {
+  direction: ltr;
 }
 
 /* Responsive Design */
