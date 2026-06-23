@@ -212,6 +212,21 @@ html[dir="rtl"], body.rtl {
   text-align: right;
 }
 
+html[dir="rtl"] h1,
+body.rtl h1,
+html[dir="rtl"] h2,
+body.rtl h2,
+html[dir="rtl"] h3,
+body.rtl h3,
+html[dir="rtl"] #hero-subheading,
+body.rtl #hero-subheading,
+html[dir="rtl"] .footer,
+body.rtl .footer,
+html[dir="rtl"] .overlay,
+body.rtl .overlay {
+  text-align: right;
+}
+
 html[dir="rtl"] .hero,
 body.rtl .hero {
   text-align: right;
